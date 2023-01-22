@@ -1,2 +1,2 @@
 # calculator
-calculator with UI for the The Odin Project
+Calculator with UI for the The Odin Project

@@ -1,0 +1,114 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "screen screen screen screen"
+    "clear  clear  delete delete"
+    "seven  eight  nine   divide"
+    "four   five   six   multiply"
+    "one    two   three  minus"
+    "zero   zero  equals  plus";
+    gap: 20px;
+}
+
+.screen {
+    /* width: 20rem; */
+    /* height: 5rem; */
+    border: solid 1px blue;
+}
+
+/* Setting Grid Template Areas */
+.screen {
+    grid-area: screen;
+}
+
+.clear {
+    grid-area: clear;
+}
+
+.delete {
+    grid-area: delete;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.six {
+    grid-area: six;
+}
+
+.five {
+    grid-area: five;
+}
+
+.four {
+    grid-area: four;
+}
+
+.three {
+    grid-area: three;
+}
+
+.two {
+    grid-area: two;
+}
+
+.one {
+    grid-area: one;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.plus {
+    grid-area: plus;
+}
+
+.minus {
+    grid-area: minus;
+}
+
+.multiply {
+    grid-area: multiply;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.equals {
+    grid-area: equals;
+}
+
+.clear,
+.delete {
+    /* width: 10rem; */
+    /* height: 2.5rem; */
+    border: solid 1px blue;
+}
+
+.numbers {
+    /* width: 3rem; */
+    /* height: 2.5rem; */
+    border: solid 1px blue;
+}
+
+.plus, 
+.minus,
+.multiply,
+.divide,
+.equals {
+    /* width: 3rem; */
+    /* height: 2.5rem; */
+    border: solid 1px blue;
+}

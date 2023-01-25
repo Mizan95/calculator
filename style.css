@@ -1,20 +1,33 @@
-.container {
+.wrapper {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 20px;
+    border: solid 5px darkgrey;
+    background-color: deepskyblue;
+    border-radius: 5px;
+}
+
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "screen screen screen screen"
-    "clear  clear  delete delete"
-    "seven  eight  nine   divide"
-    "four   five   six   multiply"
-    "one    two   three  minus"
-    "zero   zero  equals  plus";
+    grid-template-areas:
+        "screen screen screen screen"
+        "clear  clear  delete delete"
+        "seven  eight  nine   divide"
+        "four   five   six   multiply"
+        "one    two   three  minus"
+        "zero   dp  equals  plus";
     gap: 20px;
+    width: 50vh;
+    height: 80vh;
+    margin: auto;
 }
 
 .screen {
-    /* width: 20rem; */
-    /* height: 5rem; */
-    border: solid 1px blue;
+    border: solid 3px blue;
+    border-radius: 10px;
+    background-color: beige;
 }
 
 /* Setting Grid Template Areas */
@@ -90,17 +103,25 @@
     grid-area: equals;
 }
 
+.decimalPoint {
+    grid-area: dp;
+}
+
 .clear,
 .delete {
     /* width: 10rem; */
     /* height: 2.5rem; */
-    border: solid 1px blue;
+    border: solid 3px blue;
+    border-radius: 10px;
+    background-color: beige;
+    text-align: center;
 }
 
-.numbers {
+.numbers,
+.decimalPoint {
     /* width: 3rem; */
     /* height: 2.5rem; */
-    border: solid 1px blue;
+    border: solid 3px blue;
 }
 
 .plus, 
@@ -110,5 +131,5 @@
 .equals {
     /* width: 3rem; */
     /* height: 2.5rem; */
-    border: solid 1px blue;
+    border: solid 3px blue;
 }

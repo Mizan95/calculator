@@ -1,4 +1,51 @@
-// operation functions
+const screen = document.querySelector(".screen");
+
+const numbers = document.querySelectorAll(".numbers");
+const operatorButtons = document.querySelectorAll(".operators");
+
+let operandOne;
+let operandTwo;
+let operator;
+let screenNumbers;
+
+screenNumbers = [];
+
+
+operatorButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        operandOne = screen.textContent;
+        operator = e.target.textContent;
+        clearScreen();
+    })
+})
+
+function clearScreen() {
+    screenNumbers = [];
+}
+
+function displayNumbers(button) {
+    screenNumbers.push(button.target.textContent);
+    screen.textContent = screenNumbers.join("");
+}
+
+const equals = document.querySelector(".equals");
+
+equals.addEventListener('click', () => {
+    operandTwo = screen.textContent;
+    screen.textContent =  operate(operator, +operandOne, +operandTwo);
+})
+
+numbers.forEach(number => {
+    number.addEventListener('click', (e) => {
+        // if (operandOne !== "undefined") {
+        //     clearScreen();
+        //     screen.textContent = screenNumbers;
+        // }
+        displayNumbers(e);        
+    })
+})
+
+//  operation functions
 function sum(a, b) {
     return a + b;
 }
@@ -15,25 +62,25 @@ function divide(a, b) {
     return a / b;
 }
 
-// operate function 
+// -- //
 
 function operate(operator, a, b) {
-    let result;
     switch (operator) {
         case "+":
-            result = sum(a, b);
-            break;
+            return sum(a, b);
         case "-":
-            result = minus(a, b);
-            break;
+            return minus(a, b);
         case "*":
-            result = product(a, b);
-            break;
+            return product(a, b);
         default:
-            result = divide(a, b);
+            return divide(a, b);
     }
-    return result;
 }
 
 
-console.log(operate("/", 3, 5));
+
+
+
+
+
+

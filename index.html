@@ -5,29 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script type="module" src="utils.js"></script>
     <title>Calculator</title>
 </head>
 <body>
     <div class="container">
-        <div class="screen">07123123123</div>
-        <div class="clear">CLEAR</div>
-        <div class="delete">DELETE</div>
-        <div class="numbers nine">9</div>
-        <div class="numbers eight">8</div>
-        <div class="numbers seven">7</div>
-        <div class="numbers six">6</div>
-        <div class="numbers five">5</div>
-        <div class="numbers four">4</div>
-        <div class="numbers three">3</div>
-        <div class="numbers two">2</div>
-        <div class="numbers one">1</div>
-        <div class="numbers zero">0</div>
-        <div class="plus">+</div>
-        <div class="minus">-</div>
-        <div class="multiply">x</div>
-        <div class="divide">/</div>
-        <div class="equals">=</div>
+        <div class="wrapper">
+            <div class="grid">
+                <div class="screen"></div>
+                <div class="clear">CLEAR</div>
+                <div class="delete">DELETE</div>
+                <div class="numbers nine">9</div>
+                <div class="numbers eight">8</div>
+                <div class="numbers seven">7</div>
+                <div class="numbers six">6</div>
+                <div class="numbers five">5</div>
+                <div class="numbers four">4</div>
+                <div class="numbers three">3</div>
+                <div class="numbers two">2</div>
+                <div class="numbers one">1</div>
+                <div class="numbers zero">0</div>
+                <div class="plus operators">+</div>
+                <div class="minus operators">-</div>
+                <div class="multiply operators">*</div>
+                <div class="divide operators">/</div>
+                <div class="equals">=</div>
+                <div class="decimalPoint">.</div>
+            </div>
+        </div>
     </div>
 
     

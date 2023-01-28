@@ -1,49 +1,49 @@
 const screen = document.querySelector(".screen");
 
 const numbers = document.querySelectorAll(".numbers");
-const operatorButtons = document.querySelectorAll(".operators");
-
-let operandOne;
-let operandTwo;
-let operator;
-let screenNumbers;
-
-screenNumbers = [];
-
-
-operatorButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        operandOne = screen.textContent;
-        operator = e.target.textContent;
-        clearScreen();
-    })
-})
-
-function clearScreen() {
-    screenNumbers = [];
-}
-
-function displayNumbers(button) {
-    screenNumbers.push(button.target.textContent);
-    screen.textContent = screenNumbers.join("");
-}
-
-const equals = document.querySelector(".equals");
-
-equals.addEventListener('click', () => {
-    operandTwo = screen.textContent;
-    screen.textContent =  operate(operator, +operandOne, +operandTwo);
-})
 
 numbers.forEach(number => {
     number.addEventListener('click', (e) => {
-        // if (operandOne !== "undefined") {
-        //     clearScreen();
-        //     screen.textContent = screenNumbers;
-        // }
-        displayNumbers(e);        
+        setNumbers(e); 
+        displayNumbers();
     })
 })
+
+let screenNumbers = [];
+screen.textContent = 0;
+function setNumbers(button) {
+    screenNumbers.push(button.target.textContent);
+}
+
+function displayNumbers() {
+    screen.textContent = screenNumbers.join("");
+}
+
+const operatorButtons = document.querySelectorAll(".operators");
+let operandOne = "";
+let operator;
+
+operatorButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        operandOne = screenNumbers.join("");
+        operator = e.target.textContent;
+        clearNumbers();
+    })
+})
+
+function clearNumbers() {
+    screenNumbers = [];
+}
+
+const equals = document.querySelector(".equals");
+let operandTwo;
+let result;
+equals.addEventListener('click', () => {
+    operandTwo = screenNumbers.join("");
+    result = operate(operator, +operandOne, +operandTwo);
+    screen.textContent = result;
+})
+
 
 //  operation functions
 function sum(a, b) {

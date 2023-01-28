@@ -28,6 +28,7 @@
     border: solid 3px blue;
     border-radius: 10px;
     background-color: beige;
+    min-height: 20px;
 }
 
 /* Setting Grid Template Areas */
@@ -114,14 +115,21 @@
     border: solid 3px blue;
     border-radius: 10px;
     background-color: beige;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .numbers,
 .decimalPoint {
     /* width: 3rem; */
     /* height: 2.5rem; */
-    border: solid 3px blue;
+    border: solid 3px rgb(47, 47, 177);
+    border-radius: 10px;
+    background-color: rgb(238, 223, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .plus, 
@@ -132,4 +140,19 @@
     /* width: 3rem; */
     /* height: 2.5rem; */
     border: solid 3px blue;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus, 
+.minus,
+.multiply,
+.divide {
+    background-color: limegreen;
+}
+
+.equals {
+    background-color: greenyellow;
 }

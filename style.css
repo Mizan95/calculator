@@ -1,10 +1,14 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .wrapper {
     width: fit-content;
     height: fit-content;
     margin: auto;
     padding: 20px;
     border: solid 5px darkgrey;
-    background-color: deepskyblue;
+    background-color: #e3e1ebd0;
     border-radius: 5px;
 }
 
@@ -18,21 +22,34 @@
         "four   five   six   multiply"
         "one    two   three  minus"
         "zero   zero  equals  plus";
-    gap: 20px;
+    column-gap: 10px;
+    row-gap: 20px;
     width: 50vh;
     height: 80vh;
     margin: auto;
 }
 
-.screen {
-    border: solid 3px blue;
+.screenWrapper {
+    border: solid 5px #3711e9;
     border-radius: 10px;
     background-color: beige;
-    min-height: 20px;
+    /* height: 120px; */
+    font-size: 4em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+    /* box-shadow: 1px 1px; */
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+
+.screen {
+    margin-right: 2%;
 }
 
 /* Setting Grid Template Areas */
-.screen {
+.screenWrapper {
     grid-area: screen;
 }
 
@@ -105,29 +122,33 @@
 }
 
 
-/* Clear Delete Buttons */
+/* Clear and Delete Buttons */
 .clear,
 .delete {
     /* width: 10rem; */
-    /* height: 2.5rem; */
-    border: solid 3px blue;
+    /* height: 4rem; */
+    border: solid 3px #5a42ee;
     border-radius: 10px;
     background-color: beige;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: #199cd8 2px 1px 1px 1px;
 }
 
-/* Numbers */
+/* Number buttons */
 .numbers {
     /* width: 3rem; */
     /* height: 2.5rem; */
     border: solid 3px rgb(47, 47, 177);
     border-radius: 10px;
-    background-color: rgb(238, 223, 10);
+    background-color: beige;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 0px 1px 0px;
 }
 
 /* Operator Buttons */
@@ -140,6 +161,7 @@
     /* height: 2.5rem; */
     border: solid 3px blue;
     border-radius: 10px;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,9 +171,31 @@
 .minus,
 .multiply,
 .divide {
-    background-color: limegreen;
+    background-color: beige;
+    border: solid 3px #378e37;
+    box-shadow: #36451a 1px 0px 1px 0px;
 }
 
 .equals {
-    background-color: greenyellow;
+    background-color: beige;
+    border: solid 3px #ea441d;
+    box-shadow: #d9671c 1px 0px 1px 0px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+span {
+    font-size: 1.5rem;
+    color: orangered;
+}
+
+a:link, a:visited {
+    color: orangered;
+    text-decoration: none;
+    cursor: pointer;
 }

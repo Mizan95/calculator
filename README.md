@@ -10,5 +10,5 @@ Calculator with UI for the The Odin Project
 - [X] ] Map functions to calculator UI
 - [ ] Make calculator visually appealing
 
-
+Set subscreen content feature
 

@@ -10,10 +10,15 @@ function setScreenContent(content) {
     screen.textContent = content;
 }
 
+let shouldResetScreen = false;
 
 const numbers = document.querySelectorAll(".numbers");
 numbers.forEach(number => {
     number.addEventListener('click', (e) => {
+        if (shouldResetScreen) {
+            clearNumbers();
+            shouldResetScreen = false;
+        }
         setNumberList(e);
         setScreenContent(numberList.join(""));
     })
@@ -74,11 +79,13 @@ equals.addEventListener('click', () => {
         setScreenContent(numberList.join(""));
         return;
     } 
+    // If operator was selected
     else if (operator) {
         setOperandTwo(numberList.join(""));
         result = operate(operator, +operandOne, +operandTwo);
         setScreenContent(result);
         operandOne = result;
+        shouldResetScreen = true;
     }
 
 })

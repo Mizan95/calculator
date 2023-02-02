@@ -17,7 +17,7 @@
         "seven  eight  nine   divide"
         "four   five   six   multiply"
         "one    two   three  minus"
-        "zero   dp  equals  plus";
+        "zero   zero  equals  plus";
     gap: 20px;
     width: 50vh;
     height: 80vh;
@@ -104,9 +104,6 @@
     grid-area: equals;
 }
 
-.decimalPoint {
-    grid-area: dp;
-}
 
 /* Clear Delete Buttons */
 .clear,
@@ -121,9 +118,8 @@
     align-items: center;
 }
 
-/* Numbers and DP */
-.numbers,
-.decimalPoint {
+/* Numbers */
+.numbers {
     /* width: 3rem; */
     /* height: 2.5rem; */
     border: solid 3px rgb(47, 47, 177);

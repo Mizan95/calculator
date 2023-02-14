@@ -46,6 +46,8 @@ body {
 
 .screen {
     margin-right: 2%;
+    min-height: 74px;
+    overflow: auto;
 }
 
 /* Setting Grid Template Areas */
@@ -137,6 +139,14 @@ body {
     box-shadow: #199cd8 2px 1px 1px 1px;
 }
 
+.clear:hover {
+    background-color: rgb(77, 77, 206);
+}
+
+.delete:hover {
+    background-color: rgb(77, 77, 206);
+}
+
 /* Number buttons */
 .numbers {
     /* width: 3rem; */
@@ -151,14 +161,16 @@ body {
     box-shadow: 1px 0px 1px 0px;
 }
 
+.numbers:hover {
+    background-color: #9e95c5;
+}
+
 /* Operator Buttons */
 .plus, 
 .minus,
 .multiply,
 .divide,
 .equals {
-    /* width: 3rem; */
-    /* height: 2.5rem; */
     border: solid 3px blue;
     border-radius: 10px;
     font-size: 2rem;
@@ -167,19 +179,24 @@ body {
     align-items: center;
 }
 
-.plus, 
-.minus,
-.multiply,
-.divide {
+.operators {
     background-color: beige;
     border: solid 3px #378e37;
     box-shadow: #36451a 1px 0px 1px 0px;
+}
+
+.operators:hover {
+    background-color: #78c255;
 }
 
 .equals {
     background-color: beige;
     border: solid 3px #ea441d;
     box-shadow: #d9671c 1px 0px 1px 0px;
+}
+
+.equals:hover {
+    background-color: orange;
 }
 
 footer {
